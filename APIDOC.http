@@ -16,3 +16,50 @@ Content-Type: application/json
 GET http://127.0.0.1:8000/v1/spending/getme/
 Accept: application/json
 Authorization: Basic user_01:password@123
+
+
+# Expense endpoints ========================
+
+#api call for listing all expenses
+###
+GET http://127.0.0.1:8000/v1/spending/expenses/
+Accept: application/json
+Authorization: Basic user_01:password@123
+
+#api call for creating expense
+###
+POST http://127.0.0.1:8000/v1/spending/expenses/
+Content-Type: application/json
+Authorization: Basic user_01:password@123
+
+{
+    "title":"medicine",
+    "amount":500,
+    "category":"HEALTH",
+    "payment_method":"upi"
+}
+
+#api call for listing specific expenses
+###
+GET http://127.0.0.1:8000/v1/spending/expenses/2/
+Accept: application/json
+Authorization: Basic user_01:password@123
+
+# api call for updating expense
+###
+PUT http://127.0.0.1:8000/v1/spending/expenses/2/
+Content-Type: application/json
+Authorization: Basic user_01:password@123
+
+{
+    "title":"medicine",
+    "amount":1000,
+    "category":"HEALTH",
+    "payment_method":"upi"
+}
+
+# api call for deleting expense
+###
+DELETE http://127.0.0.1:8000/v1/spending/expenses/2/
+Accept: application/json
+Authorization: Basic user_01:password@123
