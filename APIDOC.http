@@ -46,9 +46,9 @@ Content-Type: application/json
 Authorization: Token 3e9f340153cf3869450d28704ea65f5e7095f9b8
 
 {
-    "title":"turf",
+    "title":"",
     "amount":500,
-    "category":"OTHER",
+    "category":"FOOD",
     "payment_method":"upi"
 }
 
@@ -67,10 +67,10 @@ Content-Type: application/json
 Authorization: Token 3e9f340153cf3869450d28704ea65f5e7095f9b8
 
 {
-    "title":"medicine",
+    "title":"petrol",
     "amount":1500,
-    "category":"HEALTH",
-    "payment_method":"upi"
+    "category":"OTHER",
+    "payment_method":"cash"
 }
 
 # api call for deleting expense
@@ -78,4 +78,17 @@ Authorization: Token 3e9f340153cf3869450d28704ea65f5e7095f9b8
 DELETE http://127.0.0.1:8000/v1/spending/expenses/2/
 Accept: application/json
 # Authorization: Basic user_01:password@123
+Authorization: Token 3e9f340153cf3869450d28704ea65f5e7095f9b8
+
+
+# api call for spending summary
+###
+GET http://127.0.0.1:8000/v1/spending/expenses/summary/
+Accept: application/json
+Authorization: Token 3e9f340153cf3869450d28704ea65f5e7095f9b8
+
+# budgetplan api call
+###
+GET http://127.0.0.1:8000/v1/spending/budgetplan/
+Accept: application/json
 Authorization: Token 3e9f340153cf3869450d28704ea65f5e7095f9b8
