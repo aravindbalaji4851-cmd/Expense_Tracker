@@ -29,7 +29,7 @@ class SignUpView(APIView):
             qs = User.objects.create_user(**cleaned_data)
 
             instance = UserSerializer(qs)
-
+    
             return Response(data=instance.data)
 
         else: return Response(data=serializer_inst.errors)

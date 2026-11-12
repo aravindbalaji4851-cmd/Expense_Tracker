@@ -27,7 +27,7 @@ Content-Type: application/json
 GET http://127.0.0.1:8000/v1/spending/getme/
 Accept: application/json
 #Authorization: Basic user_01:password@123
-Authorization: Token 3e9f340153cf3869450d28704ea65f5e7095f9b8
+Authorization: Token YOUR_TOKEN_HERE
 
 # Expense endpoints ========================
 
@@ -36,14 +36,14 @@ Authorization: Token 3e9f340153cf3869450d28704ea65f5e7095f9b8
 GET http://127.0.0.1:8000/v1/spending/expenses/
 Accept: application/json
 # Authorization: Basic user_01:password@123
-Authorization: Token 3e9f340153cf3869450d28704ea65f5e7095f9b8
+Authorization: Token YOUR_TOKEN_HERE
 
 #api call for creating expense
 ###
 POST http://127.0.0.1:8000/v1/spending/expenses/
 Content-Type: application/json
 # Authorization: Basic user_01:password@123
-Authorization: Token 3e9f340153cf3869450d28704ea65f5e7095f9b8
+Authorization: Token YOUR_TOKEN_HERE
 
 {
     "title":"",
@@ -57,14 +57,14 @@ Authorization: Token 3e9f340153cf3869450d28704ea65f5e7095f9b8
 GET http://127.0.0.1:8000/v1/spending/expenses/4/
 Accept: application/json
 # Authorization: Basic user_02:password@123
-Authorization: Token 3e9f340153cf3869450d28704ea65f5e7095f9b8
+Authorization: Token YOUR_TOKEN_HERE
 
 # api call for updating expense
 ###
 PUT http://127.0.0.1:8000/v1/spending/expenses/3/
 Content-Type: application/json
 # Authorization: Basic user_02:password@123
-Authorization: Token 3e9f340153cf3869450d28704ea65f5e7095f9b8
+Authorization: Token YOUR_TOKEN_HERE
 
 {
     "title":"petrol",
@@ -78,17 +78,17 @@ Authorization: Token 3e9f340153cf3869450d28704ea65f5e7095f9b8
 DELETE http://127.0.0.1:8000/v1/spending/expenses/2/
 Accept: application/json
 # Authorization: Basic user_01:password@123
-Authorization: Token 3e9f340153cf3869450d28704ea65f5e7095f9b8
+Authorization: Token YOUR_TOKEN_HERE
 
 
 # api call for spending summary
 ###
 GET http://127.0.0.1:8000/v1/spending/expenses/summary/
 Accept: application/json
-Authorization: Token 3e9f340153cf3869450d28704ea65f5e7095f9b8
+Authorization: Token YOUR_TOKEN_HERE
 
 # budgetplan api call
 ###
 GET http://127.0.0.1:8000/v1/spending/budgetplan/
 Accept: application/json
-Authorization: Token 3e9f340153cf3869450d28704ea65f5e7095f9b8
+Authorization: Token YOUR_TOKEN_HERE
